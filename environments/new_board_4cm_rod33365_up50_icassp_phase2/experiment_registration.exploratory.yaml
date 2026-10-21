@@ -1,0 +1,47 @@
+schema_version: 1
+environment_id: new_board_4cm_rod33365_up50_icassp_phase2
+status: EXPLORATORY
+use_in_main_statistics: false
+transform_convention: T_X_from_Y_column_vectors_metres
+
+# Inherits the physical board, rod and magnet installation used by the
+# 2026-08-28 up50 yaw-calibration and five-trajectory experiments. The prior
+# tracker published x/y unchanged and depth with the opposite sign. For Pose
+# rotations that left-handed position display is completed into a proper
+# right-handed frame by retaining +X and reversing both +Y and +Z.
+provenance: inherited_from_up50_20260828_same_hardware_exploratory
+magnet_id: up50_20260828_same_tip_magnet
+polarity: positive_moment_Z_M_is_negative_rod_tip_Z
+roll_policy: axisymmetric_zero_roll_M_X_aligned_rod_tip_X
+
+array_axis_contract:
+  origin: current_sensor_surface_center_plane1_0_0_minus_0p007_m
+  x_A_in_plane1: positive_X
+  y_A_in_plane1: negative_Y
+  z_A_in_plane1: negative_Z
+  determinant: 1
+
+magnet_mount_contract:
+  center_relative_to_rod_tip_m: [0.0, 0.0, 0.0]
+  positive_moment_axis_in_rod_tip: [0.0, 0.0, -1.0]
+  body_x_axis_in_rod_tip: [1.0, 0.0, 0.0]
+  axisymmetric_roll: true
+
+# ^P T_A. Array +Z points away from the sensor surface, which is plane1 -Z.
+# Rx(pi) retains +X while reversing +Y/+Z. The array origin is the current
+# sensor surface center at plane1 z=-0.007 m.
+T_plane1_from_array:
+  - [1.0, 0.0, 0.0, 0.0]
+  - [0.0, -1.0, 0.0, 0.0]
+  - [0.0, 0.0, -1.0, -0.007]
+  - [0.0, 0.0, 0.0, 1.0]
+
+# ^R T_M. The previous experiments treated rod_tip as the magnet-center
+# ground-truth point. Positive magnetic moment is opposite rod_tip +Z; the
+# same Rx(pi) polarity makes array +Z at the center reproduce the historical
+# identity rod_tip orientation.
+T_rod_tip_from_magnet:
+  - [1.0, 0.0, 0.0, 0.0]
+  - [0.0, -1.0, 0.0, 0.0]
+  - [0.0, 0.0, -1.0, 0.0]
+  - [0.0, 0.0, 0.0, 1.0]

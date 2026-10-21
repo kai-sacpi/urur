@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>hx_waypoint_runtime</name>
+  <version>0.1.0</version>
+  <description>Validated recording playback, simulation execution, safety gating, and telemetry for UR waypoint trajectories.</description>
+  <maintainer email="hxhou0207@gmail.com">Huaxin Hou</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>builtin_interfaces</depend>
+  <depend>control_msgs</depend>
+  <depend>controller_manager_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>hx_waypoint_interfaces</depend>
+  <depend>kdl_parser</depend>
+  <depend>orocos_kdl_vendor</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>urdf</depend>
+  <depend>yaml-cpp</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

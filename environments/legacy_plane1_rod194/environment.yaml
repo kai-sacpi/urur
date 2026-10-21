@@ -1,0 +1,13 @@
+schema_version: 1
+environment_id: legacy_plane1_rod194
+description: Measured-candidate p10 free-space test profile for legacy quaternion snake trajectories with the active 0.194 m go_to_point TCP default
+deployment_mode: simulation
+robot_model: ur5
+legacy_test_profile:
+  profile_id: p10_rod194_quaternion
+  plane_pose_id: user_measured_candidate_p10
+  raw_base_to_plane1_pose_xyz_rotvec: [-0.07584, -0.38257, 0.28285, -0.00534, 0.00519, 0.82389]
+  base_link_conversion: controlled_urdf_base_link_to_base_rz_pi
+  historical_per_file_frame_binding: false
+  rod_length_m: 0.194
+  selection_basis: fixed quaternion snake family; preserves the legacy rod default while the nearer p10 candidate contains both snake envelopes

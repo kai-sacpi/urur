@@ -1,0 +1,8 @@
+path=runs/circle_mj_v2__20260720_040223__20260720_042211/simulation/execution_telemetry.csv
+sha256=a2e7658cb3daecb7063a322ac401e3d8b935c155d8c376b6369e84f698c7edcf
+rows=7882
+trajectory_time_min_s=0.000000000
+trajectory_time_max_s=62.991937579
+speed_scaling_min=1
+speed_scaling_max=1
+state_EXECUTING=7882

@@ -1,0 +1,27 @@
+schema_version: 1
+environment_id: new_board_4cm_rod33365_up50_icassp_phase2
+
+# This template is intentionally unusable. Copy it to a separately named
+# measured registration file, fill every field from physical calibration,
+# and preserve that file as an immutable experiment input.
+status: UNREGISTERED
+use_in_main_statistics: false
+transform_convention: T_X_from_Y_column_vectors_metres
+
+magnet_id: null
+polarity: null
+roll_policy: null
+
+# ^P T_A: maps a homogeneous column vector expressed in the array frame A to
+# plane1 P. The populated value must be a finite 4x4 proper SE(3) matrix with
+# last row [0, 0, 0, 1], an orthonormal rotation, and determinant +1.
+T_plane1_from_array: null
+
+# ^R T_M: maps a homogeneous column vector expressed in the magnet frame M to
+# the rod_tip frame R. Its translation is in metres and its rotation must also
+# be proper SE(3). The generator computes:
+#
+#   T_P_R = T_P_A @ T_A_M @ inv(T_R_M)
+#
+# It never guesses a transform, reflects an axis, flips q, or chooses roll.
+T_rod_tip_from_magnet: null

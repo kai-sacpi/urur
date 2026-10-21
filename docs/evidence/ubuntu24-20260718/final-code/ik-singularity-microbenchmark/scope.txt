@@ -1,0 +1,1 @@
+scope=fixed candidates only; no trajectory CSV, snake, compile, or playback

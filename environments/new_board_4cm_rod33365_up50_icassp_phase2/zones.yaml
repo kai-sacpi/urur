@@ -1,0 +1,83 @@
+schema_version: 1
+contact_policy:
+  allowed_contact_link: rod_tip
+  # The generic contact-policy schema is used here as a fail-closed analytical
+  # no-cross boundary, not as permission to touch the sensor or its keepout.
+  # This boundary is 5 mm outside the up50 cuboid's local -Z face and
+  # therefore agrees with the scene-clearance requirement below.
+  allowed_surface: sensor_keepout_clearance_boundary
+  maximum_tip_penetration_m: 0.0
+  minimum_non_tip_clearance_m: 0.005
+curobo_scene:
+  cuboid:
+    # Four slabs form the accessible ground at base_link z=0. A fifth support
+    # slab fills the 240 x 240 mm fixed-base footprint with its top recessed
+    # 1.5 mm. This clears the installed base while the 5 mm cuRobo clearance
+    # probe still prevents every moving collision sphere from reaching z=0.
+    base_ground_x_negative:
+      frame_id: base_link
+      dims: [1.38, 3.0, 0.10]
+      pose: [-0.81, 0.0, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_x_positive:
+      frame_id: base_link
+      dims: [1.38, 3.0, 0.10]
+      pose: [0.81, 0.0, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_y_negative:
+      frame_id: base_link
+      dims: [0.24, 1.38, 0.10]
+      pose: [0.0, -0.81, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_y_positive:
+      frame_id: base_link
+      dims: [0.24, 1.38, 0.10]
+      pose: [0.0, 0.81, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_fixed_base_support:
+      frame_id: base_link
+      dims: [0.24, 0.24, 0.0985]
+      pose: [0.0, 0.0, -0.05075, 1.0, 0.0, 0.0, 0.0]
+    # 0.40 x 0.40 m in plane1 XY. Translating the legacy keepout by -50 mm
+    # gives [-0.060, +0.100] m; the user-required 60 mm protected region above
+    # the current z=-0.007 m sensor plane extends it to -0.067 m. Their union
+    # is the authoritative local-z interval [-0.067, +0.100] m.
+    sensor_board_keepout:
+      frame_id: plane1
+      dims: [0.40, 0.40, 0.167]
+      pose: [0.0, 0.0, 0.0165, 1.0, 0.0, 0.0, 0.0]
+    # The remaining three cuboids replace the legacy base_link floor/rear
+    # placeholders. All coordinates are authoritative new_board_4cm-local
+    # metres. Each 10 mm slab lies entirely on the prohibited side.
+    # x > +0.600 m; finite Y/Z visualization span is 2 m.
+    x_positive_limit_wall:
+      frame_id: new_board_4cm
+      dims: [0.01, 2.0, 2.0]
+      pose: [0.605, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+    # y > +0.700 m; finite X/Z visualization span is 2 m.
+    y_positive_limit_wall:
+      frame_id: new_board_4cm
+      dims: [2.0, 0.01, 2.0]
+      pose: [0.0, 0.705, 0.0, 1.0, 0.0, 0.0, 0.0]
+    # z <= -0.720 m, y <= -0.100 m, x in [0.129, 0.294] m. The unbounded
+    # negative-Y direction is represented by the finite range [-2.10, -0.10].
+    top_negative_z_panel:
+      frame_id: new_board_4cm
+      dims: [0.165, 2.0, 0.01]
+      pose: [0.2115, -1.10, -0.725, 1.0, 0.0, 0.0, 0.0]
+analysis_zones:
+  # plane point = normal * offset -> local z=-0.072 m. The analytical gate is
+  # finite and applies only to the confirmed 0.40 x 0.40 m sensor-board XY
+  # footprint (including sphere-radius overlap at its edges). Local -Z points
+  # approximately upward toward the robot according to the unmodified UR
+  # Feature pose. This is a protection boundary, not a drawing surface.
+  sensor_keepout_clearance_boundary:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, -1.0]
+    offset_m: 0.072
+    x_range_m: [-0.20, 0.20]
+    y_range_m: [-0.20, 0.20]
+  # Audited mathematical location of the current up50 sensor surface for
+  # analysis and its non-collision RViz Marker. With normal -Z and offset
+  # +0.007 m, the plane lies at local z=-0.007 m. It is inside the keepout and
+  # is deliberately not a reachable or allowed contact target.
+  actual_sensor_plane:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, -1.0]
+    offset_m: 0.007

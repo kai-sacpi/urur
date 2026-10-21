@@ -1,0 +1,54 @@
+schema_version: 1
+environment_id: new_board_4cm_rod33365
+description: Direct new_board_4cm UR Feature sensor-board environment with a 333.65 mm x 5 mm rod
+deployment_mode: simulation
+robot_model: ur5
+calibration:
+  dashboard:
+    robot_ip: 192.168.1.99
+    variable: new_board_4cm
+    source_type: ur_installation_plane_feature
+    pose_semantics: base_to_feature
+    raw_base_to_feature_pose_xyz_rotvec:
+      [-0.06528, -0.46973, 0.18244, 1.1583, 2.91549, -0.00016]
+  tf_binding:
+    policy: direct_ur_feature_pose
+    parent_frame: base
+    child_frame: plane1
+    translation_policy: unchanged
+    rotation_policy: ur_rotation_vector_to_quaternion_xyzw
+    orientation_correction: none
+    wall_used_as_pose_reference: false
+    setup_pose_must_match_dashboard_pose: true
+  sensor_geometry:
+    # The measured Feature +Z is nearly base -Z. The real sensor surface is
+    # therefore represented 43 mm along local plane1 +Z, with the small raw
+    # Feature tilt preserved exactly.
+    actual_sensor_plane_local_z_m: 0.043
+    board_size_xy_m: [0.40, 0.40]
+    board_center_matches_feature_origin: true
+    board_center_in_plane1_xy_m: [0.0, 0.0]
+    keepout_local_z_min_m: -0.01
+    keepout_local_z_max_m: 0.15
+    model_status: board_center_and_workspace_boundaries_confirmed
+workspace_boundaries:
+  frame_id: new_board_4cm
+  representation: finite_collision_slabs_on_prohibited_side
+  slab_thickness_m: 0.01
+  finite_span_m: 2.0
+  remove_collision_object_ids: [floor, rear_keepout]
+  ground:
+    frame_id: base_link
+    size_xy_m: [3.0, 3.0]
+    top_z_m: 0.0
+    thickness_m: 0.10
+    ur5_nominal_reach_m: 0.85
+    fixed_base_cutout_size_xy_m: [0.24, 0.24]
+    fixed_base_support_recess_m: 0.0015
+  positive_x_limit_m: 0.60
+  positive_y_limit_m: 0.70
+  top_panel:
+    boundary_z_m: -0.72
+    x_range_m: [0.129, 0.294]
+    y_max_m: -0.10
+    finite_y_min_m: -2.10

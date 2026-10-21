@@ -1,0 +1,25 @@
+schema_version: 1
+contact_policy:
+  allowed_contact_link: rod_tip
+  allowed_surface: safety_lower_plane
+  maximum_tip_penetration_m: 0.001
+  minimum_non_tip_clearance_m: 0.005
+curobo_scene:
+  cuboid:
+    floor:
+      frame_id: base_link
+      dims: [2.0, 2.0, 0.10]
+      pose: [0.0, 0.0, -0.10, 1.0, 0.0, 0.0, 0.0]
+    rear_keepout:
+      frame_id: base_link
+      dims: [0.10, 1.20, 1.20]
+      pose: [-0.30, 0.0, 0.50, 1.0, 0.0, 0.0, 0.0]
+analysis_zones:
+  # The legacy paths are free-space scans with local z spanning roughly
+  # -0.10..0.20 m, not wall-contact drawings.  Keep the mandatory mathematical
+  # contact surface well below every source tip and the assumed rod so it acts
+  # only as a conservative lower safety boundary.
+  safety_lower_plane:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, 1.0]
+    offset_m: -0.25

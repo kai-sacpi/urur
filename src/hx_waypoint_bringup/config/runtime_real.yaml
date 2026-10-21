@@ -1,0 +1,24 @@
+hx_waypoint_runtime:
+  ros__parameters:
+    execution_mode: real
+    simulation_action_name: /joint_trajectory_controller/follow_joint_trajectory
+    real_action_name: /passthrough_trajectory_controller/follow_joint_trajectory
+    action_name: ""
+    joint_states_topic: /joint_states
+    build_recording_action_name: /hx_waypoint/build_recording
+    play_recording_action_name: /hx_waypoint/play_recording
+    telemetry_topic: ~/execution_telemetry
+    speed_scaling_topic: /speed_scaling_state_broadcaster/speed_scaling
+    speed_scaling_fresh_timeout_s: 2.0
+    action_server_timeout_s: 20.0
+    prepare:
+      plan_service_name: /hx_waypoint/curobo/plan_joint_path
+      planning_timeout_s: 120.0
+      settle_timeout_s: 5.0
+      endpoint_tolerance_rad: 0.001
+      endpoint_derivative_tolerance: 0.000001
+      max_duration_s: 120.0
+    start_state:
+      max_joint_error_rad: 0.02
+      settle_velocity_rad_s: 0.01
+      max_joint_state_age_s: 0.5

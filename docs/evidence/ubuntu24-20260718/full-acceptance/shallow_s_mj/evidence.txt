@@ -1,0 +1,50 @@
+recording=environments/lab_wall_a/recordings/shallow_s_mj__20260719_001742
+playback_telemetry=runs/shallow_s_mj__20260719_001742__20260719_002628/simulation/execution_telemetry.csv
+deployment_gate
+4:deployment_allowed: false
+source_and_artifact_hashes
+09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18  environments/lab_wall_a/trajectories/shallow_s_mj.csv
+09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18  environments/lab_wall_a/recordings/shallow_s_mj__20260719_001742/source_tip_trajectory.csv
+16635bf774d1ad2045f643710c03065ea7fcb1bdab62402575ec41b93c0d9575  environments/lab_wall_a/recordings/shallow_s_mj__20260719_001742/joint_trajectory.csv
+93383d63fdd7bdd4f3c190849932d3a61c5150c8866ef3583852feb9cfb7b9f5  runs/shallow_s_mj__20260719_001742__20260719_002628/simulation/execution_telemetry.csv
+compile_contract
+source_trajectory_sha256: 09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18
+duration_s: 33.0
+point_count: 3301
+source_waypoint_count: 122
+matched_source_waypoint_count: 122
+source_duration_s: 33.0
+max_source_time_error_s: 0.0
+uniform_time_scale: 1.0
+playback_telemetry_contract
+rows=4132
+trajectory_time_min_s=0.000000000
+trajectory_time_max_s=32.991980165
+speed_scaling_min=1
+speed_scaling_max=1
+state_EXECUTING=4132
+recording_checksums
+compile_report.yaml: OK
+environment_snapshot/controllers.yaml: OK
+environment_snapshot/environment.yaml: OK
+environment_snapshot/frames.yaml: OK
+environment_snapshot/meshes/.gitkeep: OK
+environment_snapshot/planner.yaml: OK
+environment_snapshot/recording.yaml: OK
+environment_snapshot/robot/asset_provenance.yaml: OK
+environment_snapshot/robot/assets/ur5.urdf: OK
+environment_snapshot/robot/calibrated_kinematics.yaml: OK
+environment_snapshot/robot/collision_spheres.yaml: OK
+environment_snapshot/robot/curobo_robot.yaml: OK
+environment_snapshot/robot/driver_kinematics.yaml: OK
+environment_snapshot/robot/robot_model.yaml: OK
+environment_snapshot/tcp.yaml: OK
+environment_snapshot/zones.yaml: OK
+joint_frames.csv: OK
+joint_trajectory.csv: OK
+manifest.yaml: OK
+sim_actual_joint.csv: OK
+sim_actual_tip.csv: OK
+sim_controller_state.csv: OK
+source_tip_trajectory.csv: OK
+validation_report.yaml: OK

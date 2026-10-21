@@ -1,0 +1,18 @@
+schema_version: 1
+robot_type: ur5
+source: official_ur_calibration_extraction
+deployment_allowed: true
+reason: Official target-robot calibration accepted by the UR driver; real execution remains contingent on a fresh validated recording and all runtime gates.
+kinematics_hash_source: target_robot_192_168_1_99
+robot_ip: 192.168.1.99
+extracted_at_local: '2026-08-05T11:33:14+08:00'
+extraction_tool: ur_calibration/calibration_correction
+reported_kinematics_hash: calib_11694654724454936412
+driver_verified_at_local: '2026-08-05T11:37:14+08:00'
+driver_verification_checksum: calib_11694654724454936412
+driver_verification_log: /tmp/ur_control_calib_verify_clean_20260805.log
+extraction_artifact_sha256: da5e0902fb8634bd38f5f01c6cdfd4019f385865e2c8991a89e365d2a3eaedc6
+# The controlled copy differs from the official extraction only by its final
+# POSIX newline. The final recording must still be rebuilt and pass the full
+# mock acceptance chain before any real controller goal is sent.
+driver_kinematics_sha256: 412169bc350ee405f97a83b30df817913afeba0f8f4bd59a00fdc6267aca0b6c

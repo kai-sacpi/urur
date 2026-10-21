@@ -1,0 +1,7 @@
+canonical_hold_start_s=60.0
+canonical_hold_end_s=63.0
+canonical_hold_rows= 301
+canonical_hold_max_joint_position_delta_rad= 0.0
+canonical_hold_max_abs_joint_velocity_rad_s= 0.0
+canonical_hold_max_abs_joint_acceleration_rad_s2= 0.0
+canonical_hold_phase_values= ['draw', 'hold']

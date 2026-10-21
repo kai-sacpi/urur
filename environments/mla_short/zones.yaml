@@ -1,0 +1,65 @@
+schema_version: 1
+contact_policy:
+  allowed_contact_link: rod_tip
+  # Fail-closed analytical no-cross boundary, 5 mm outside the protected
+  # local -Z face at z=-60 mm.
+  allowed_surface: sensor_keepout_clearance_boundary
+  maximum_tip_penetration_m: 0.0
+  minimum_non_tip_clearance_m: 0.005
+curobo_scene:
+  cuboid:
+    # Ground slabs are base_link-fixed and intentionally identical to the
+    # parent environment.
+    base_ground_x_negative:
+      frame_id: base_link
+      dims: [1.38, 3.0, 0.10]
+      pose: [-0.81, 0.0, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_x_positive:
+      frame_id: base_link
+      dims: [1.38, 3.0, 0.10]
+      pose: [0.81, 0.0, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_y_negative:
+      frame_id: base_link
+      dims: [0.24, 1.38, 0.10]
+      pose: [0.0, -0.81, -0.05, 1.0, 0.0, 0.0, 0.0]
+    base_ground_y_positive:
+      frame_id: base_link
+      dims: [0.24, 1.38, 0.10]
+      pose: [0.0, 0.81, -0.05, 1.0, 0.0, 0.0, 0.0]
+    # 0.40 x 0.40 m sensor column in sensor-centered plane1 coordinates.
+    # It covers local z=[-0.060, +0.19096485659512854] m: 60 mm above the
+    # sensor center at z=0, through the sensor, and along +Z to the
+    # base_link z=0 tabletop across the full slightly tilted footprint.
+    sensor_board_keepout:
+      frame_id: plane1
+      dims: [0.40, 0.40, 0.25096485659512857]
+      pose: [0.0, 0.0, 0.06548242829756427, 1.0, 0.0, 0.0, 0.0]
+    # Fixed obstacles are expressed directly in base_link at their previous
+    # resolved physical poses.  Recalibrating plane1 therefore cannot move
+    # them.  Pose quaternion order is cuRobo wxyz.
+    x_positive_limit_wall:
+      frame_id: base_link
+      dims: [0.01, 2.0, 2.0]
+      pose: [0.5053236250594901, 0.05454297207665315, 0.179922086442941, -0.00005100150018581122, 0.9293397736045651, -0.36921898540765635, -0.0022188758422972935]
+    y_positive_limit_wall:
+      frame_id: base_link
+      dims: [2.0, 0.01, 2.0]
+      pose: [-0.4185333020801098, -0.04305504688087691, 0.18352831324408936, -0.00005100150018581122, 0.9293397736045651, -0.36921898540765635, -0.0022188758422972935]
+    top_negative_z_panel:
+      frame_id: base_link
+      dims: [0.165, 2.0, 0.01]
+      pose: [0.9769621611413182, 1.1234196084095354, 0.9048545505968746, -0.00005100150018581122, 0.9293397736045651, -0.36921898540765635, -0.0022188758422972935]
+analysis_zones:
+  sensor_keepout_clearance_boundary:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, -1.0]
+    # normal * offset places this at local z=-65 mm: 5 mm outside the
+    # protected z=-60 mm face for the configured non-tip clearance.
+    offset_m: 0.065
+    x_range_m: [-0.20, 0.20]
+    y_range_m: [-0.20, 0.20]
+  actual_sensor_plane:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, -1.0]
+    # The actual sensor plane is the plane1 origin.
+    offset_m: 0.0

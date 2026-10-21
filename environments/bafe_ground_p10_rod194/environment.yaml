@@ -1,0 +1,5 @@
+schema_version: 1
+environment_id: bafe_ground_p10_rod194
+description: Measured p10 free-space profile for downward BAFE trajectories with a 0.194 m rod
+deployment_mode: simulation
+robot_model: ur5

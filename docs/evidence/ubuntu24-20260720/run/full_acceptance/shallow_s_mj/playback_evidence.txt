@@ -1,0 +1,8 @@
+path=runs/shallow_s_mj__20260720_033621__20260720_041943/simulation/execution_telemetry.csv
+sha256=476c874c14827fe4de94f94328e4d9f007692207fe3c98eb5e15a7bf9fcf3b10
+rows=4126
+trajectory_time_min_s=0.000000000
+trajectory_time_max_s=32.943980659
+speed_scaling_min=1
+speed_scaling_max=1
+state_EXECUTING=4126

@@ -1,0 +1,6 @@
+# Python dependencies owned by this package. cuRobo itself is pinned separately
+# in the repository-level curobo.lock because it is installed from a locked
+# upstream release/commit on the CUDA target.
+numpy==2.1.3
+PyYAML==6.0.3
+scipy==1.15.3

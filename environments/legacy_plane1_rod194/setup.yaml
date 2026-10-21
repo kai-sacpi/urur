@@ -1,0 +1,18 @@
+schema_version: 1
+setup_id: legacy_plane1_p10_rod194
+work_frame:
+  parent_frame: base
+  child_frame: plane1
+  teach_pendant_pose_xyz_rotvec:
+    [-0.07584, -0.38257, 0.28285, -0.00534, 0.00519, 0.82389]
+  aliases: []
+tool:
+  tool_id: legacy_rod_194mm
+  parent_link: tool0
+  tip_frame: rod_tip
+  tip_orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  rod:
+    axis_in_parent_xyz: [0.0, 0.0, 1.0]
+    length_m: 0.194
+    radius_m: 0.008
+    sphere_spacing_m: 0.012

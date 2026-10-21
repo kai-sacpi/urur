@@ -1,0 +1,53 @@
+schema_version: 1
+robot_cfg:
+  kinematics:
+    format_version: 2.0
+    asset_root_path: robot/assets
+    urdf_path: ur5.urdf
+    base_link: base_link
+    tool_frames: [tool0]
+    collision_link_names:
+      - shoulder_link
+      - upper_arm_link
+      - forearm_link
+      - wrist_1_link
+      - wrist_2_link
+      - wrist_3_link
+      - tool0
+    mesh_link_names:
+      - shoulder_link
+      - upper_arm_link
+      - forearm_link
+      - wrist_1_link
+      - wrist_2_link
+      - wrist_3_link
+    collision_sphere_buffer: 0.0
+    cspace:
+      joint_names:
+        - shoulder_pan_joint
+        - shoulder_lift_joint
+        - elbow_joint
+        - wrist_1_joint
+        - wrist_2_joint
+        - wrist_3_joint
+      default_joint_position: [-2.264215638612, -1.362229481182, -1.056971395008, -2.253045531399, 1.573239787748, 1.570796326795]
+      cspace_distance_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      null_space_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      max_acceleration: [3.0, 3.0, 3.0, 4.0, 4.0, 4.0]
+      max_jerk: [30.0, 30.0, 30.0, 40.0, 40.0, 40.0]
+      position_limit_clip: 0.05
+    self_collision_buffer:
+      shoulder_link: 0.02
+      upper_arm_link: 0.0
+      forearm_link: 0.0
+      wrist_1_link: 0.0
+      wrist_2_link: 0.0
+      wrist_3_link: 0.0
+      tool0: 0.0
+    self_collision_ignore:
+      shoulder_link: [upper_arm_link]
+      upper_arm_link: [forearm_link]
+      forearm_link: [wrist_1_link]
+      wrist_1_link: [wrist_2_link, wrist_3_link]
+      wrist_2_link: [wrist_3_link, tool0]
+      wrist_3_link: [tool0]

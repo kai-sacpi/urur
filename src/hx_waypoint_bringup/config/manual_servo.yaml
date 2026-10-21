@@ -1,0 +1,54 @@
+servo_node:
+  ros__parameters:
+    moveit_servo:
+      # The GUI publishes physical SI velocities.  Its hard UI cap is 20 mm/s;
+      # this second cap prevents a malformed client from requesting more.
+      command_in_type: speed_units
+      scale:
+        linear: 0.02
+        rotational: 0.10
+        joint: 0.10
+
+      move_group_name: ur_manipulator
+      publish_period: 0.01
+      max_expected_latency: 0.05
+      incoming_command_timeout: 0.10
+      apply_twist_commands_about_ee_frame: true
+
+      cartesian_command_in_topic: ~/delta_twist_cmds
+      pose_command_in_topic: ~/pose_target_cmds
+      joint_command_in_topic: ~/delta_joint_cmds
+      status_topic: ~/status
+
+      # Keep the same controller active for responsive Servo jogging and
+      # collision-planned absolute MoveGroup motions.  These two producers are
+      # serialized by the GUI/session command lock.
+      command_out_topic: /scaled_joint_trajectory_controller/joint_trajectory
+      command_out_type: trajectory_msgs/JointTrajectory
+      publish_joint_positions: true
+      # The UR scaled JTC rejects trajectories whose last point carries a
+      # non-zero velocity.  Servo therefore streams position-only horizons.
+      publish_joint_velocities: false
+      publish_joint_accelerations: false
+
+      joint_topic: /joint_states
+      monitored_planning_scene_topic: /monitored_planning_scene
+      is_primary_planning_scene_monitor: false
+      check_octomap_collisions: false
+
+      use_smoothing: true
+      smoothing_filter_plugin_name: online_signal_smoothing::ButterworthFilterPlugin
+
+      check_collisions: true
+      collision_check_rate: 20.0
+      self_collision_proximity_threshold: 0.01
+      scene_collision_proximity_threshold: 0.02
+
+      lower_singularity_threshold: 17.0
+      hard_stop_singularity_threshold: 30.0
+      leaving_singularity_threshold_multiplier: 2.0
+      singularity_step_scale: 0.01
+      halt_all_joints_in_joint_mode: true
+      halt_all_joints_in_cartesian_mode: true
+      joint_limit_margins: [0.10, 0.10, 0.10, 0.10, 0.10, 0.10]
+      override_velocity_scaling_factor: 0.0

@@ -1,0 +1,12 @@
+builtin_interfaces/Time stamp
+float64 trajectory_time_s
+string state
+string[] joint_names
+float64[] desired_position
+float64[] actual_position
+float64[] actual_velocity
+geometry_msgs/Pose actual_tip_pose
+geometry_msgs/Twist actual_tip_twist
+float64 desired_tip_speed_mps
+float64 position_error_m
+float64 speed_scaling

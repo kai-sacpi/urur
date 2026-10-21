@@ -1,0 +1,37 @@
+schema_version: 1
+collision_spheres:
+  shoulder_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.085
+  upper_arm_link:
+    - center: [0.0, 0.0, 0.08]
+      radius: 0.075
+    - center: [-0.10, 0.0, 0.08]
+      radius: 0.065
+    - center: [-0.20, 0.0, 0.08]
+      radius: 0.065
+    - center: [-0.30, 0.0, 0.08]
+      radius: 0.065
+    - center: [-0.40, 0.0, 0.08]
+      radius: 0.065
+  forearm_link:
+    - center: [0.0, 0.0, 0.03]
+      radius: 0.060
+    - center: [-0.10, 0.0, 0.03]
+      radius: 0.055
+    - center: [-0.20, 0.0, 0.03]
+      radius: 0.055
+    - center: [-0.30, 0.0, 0.03]
+      radius: 0.055
+  wrist_1_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.055
+  wrist_2_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.050
+  wrist_3_link:
+    - center: [0.0, 0.0, 0.0]
+      radius: 0.050
+  tool0:
+    - center: [0.0, 0.0, 0.03]
+      radius: 0.035

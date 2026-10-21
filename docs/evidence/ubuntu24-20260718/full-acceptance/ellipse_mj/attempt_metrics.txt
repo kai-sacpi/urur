@@ -1,0 +1,8 @@
+environments/lab_wall_a/recordings/.ellipse_mj__20260719_000349.staging
+  rows= 4126 time_range= 0.001262181 33.001333058
+  max_tip_source_position_error_m= 0.00116549884772993 source_time_actual_time= (15.25, 15.24925688)
+  max_tip_source_orientation_error_deg= 2.3453211376921392e-05 source_time_actual_time= (10.5, 10.497116788)
+environments/lab_wall_a/recordings/.ellipse_mj__20260719_001214.staging
+  rows= 4126 time_range= 0.001327 33.001281113
+  max_tip_source_position_error_m= 0.0010630905648113683 source_time_actual_time= (16.5, 16.497213581)
+  max_tip_source_orientation_error_deg= 2.2899563205985073e-05 source_time_actual_time= (10.5, 10.497229241)

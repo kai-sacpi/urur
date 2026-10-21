@@ -1,0 +1,11 @@
+schema_version: 1
+simulation:
+  controller_type: joint_trajectory_controller
+  action_name: /joint_trajectory_controller/follow_joint_trajectory
+  state_topic: /joint_trajectory_controller/controller_state
+  interpolation: spline
+real:
+  controller_type: joint_trajectory_controller
+  action_name: /joint_trajectory_controller/follow_joint_trajectory
+  interpolation: spline
+  allow_fallback: false

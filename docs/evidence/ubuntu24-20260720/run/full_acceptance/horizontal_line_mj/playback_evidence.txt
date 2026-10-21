@@ -1,0 +1,8 @@
+path=runs/horizontal_line_mj__20260720_031210__20260720_040819/simulation/execution_telemetry.csv
+sha256=53e202929399540dad07cf8710f7791cfa077d14bb78b09ee5d1d6d270760cb2
+rows=4125
+trajectory_time_min_s=0.000000000
+trajectory_time_max_s=32.944138711
+speed_scaling_min=1
+speed_scaling_max=1
+state_EXECUTING=4125

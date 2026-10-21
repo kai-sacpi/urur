@@ -1,0 +1,8 @@
+schema_version: 1
+repository: https://github.com/hxhou0207/magnet_localization_real.git
+branch: hospital
+commit: b80f4ebee945c6ac07be7732621fa8cd1dc056cd
+protocol_path: magloc/sources/hardware/nucleo/protocol.py
+protocol_blob: 9408a3043199c7338f2a6f26b43db4c4b7e5089d
+protocol_sha256: fe6510dfe3b819faeb5fad3f7c6d8535a6af603ea8eb08e1a2359590c428bbb3
+integration: independent_wire_protocol_reimplementation

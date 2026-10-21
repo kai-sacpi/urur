@@ -1,0 +1,3 @@
+sim_actual_joint.csv: rows=7882 first=0.002632188 last=63.050847624 overrun=0.050847624
+sim_controller_state.csv: rows=7882 first=0.002819119 last=63.050757973 overrun=0.050757973
+sim_actual_tip.csv: rows=7882 first=0.002632188 last=63.050847624 overrun=0.050847624

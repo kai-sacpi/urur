@@ -1,0 +1,18 @@
+schema_version: 1
+setup_id: legacy_plane1_p15_rod120
+work_frame:
+  parent_frame: base
+  child_frame: plane1
+  teach_pendant_pose_xyz_rotvec:
+    [-0.00327, -0.50126, 0.27942, -0.00576, -0.00076, 0.7778]
+  aliases: []
+tool:
+  tool_id: test_rod_120mm
+  parent_link: tool0
+  tip_frame: rod_tip
+  tip_orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  rod:
+    axis_in_parent_xyz: [0.0, 0.0, 1.0]
+    length_m: 0.120
+    radius_m: 0.005
+    sphere_spacing_m: 0.008

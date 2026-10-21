@@ -1,0 +1,18 @@
+# Goal
+string environment_id
+string environment_path
+string trajectory_id
+string source_trajectory_path
+string compiled_trajectory_path
+bool launch_rviz
+---
+# Result
+bool success
+string recording_id
+string recording_path
+string message
+---
+# Feedback
+string state
+float32 progress
+string detail

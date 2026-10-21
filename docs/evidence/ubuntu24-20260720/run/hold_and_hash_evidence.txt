@@ -1,0 +1,56 @@
+[horizontal_line_mj]
+recording_id=horizontal_line_mj__20260720_031210
+source_sha256=90127cb188a951de0a21c0d6f654eda1c2887fc8e0fea6e2bb9a1903a8d333d6
+artifact_source_sha256=90127cb188a951de0a21c0d6f654eda1c2887fc8e0fea6e2bb9a1903a8d333d6
+source_hash_equal=true
+setup_sha256=d904c67cc30c61321b1ea0ba0b4ebee3f637122e72261a363c1dd0aee33cb804
+source_duration_s=33.000000000
+hold_start_s=30.000000000
+source_hold_interval_rows=2
+source_hold_interval_phases={'draw': 1, 'hold': 1}
+source_hold_interval_pose_unique=1
+canonical_rows=3301
+canonical_hold_interval_rows=301
+canonical_hold_interval_phases={'draw': 1, 'hold': 300}
+canonical_hold_interval_position_unique=1
+canonical_hold_interval_max_abs_velocity=0
+canonical_hold_interval_max_abs_acceleration=0
+
+[shallow_s_mj]
+recording_id=shallow_s_mj__20260720_033621
+source_sha256=09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18
+artifact_source_sha256=09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18
+source_hash_equal=true
+setup_sha256=d904c67cc30c61321b1ea0ba0b4ebee3f637122e72261a363c1dd0aee33cb804
+source_duration_s=33.000000000
+hold_start_s=30.000000000
+source_hold_interval_rows=2
+source_hold_interval_phases={'draw': 1, 'hold': 1}
+source_hold_interval_pose_unique=1
+canonical_rows=3301
+canonical_hold_interval_rows=301
+canonical_hold_interval_phases={'draw': 1, 'hold': 300}
+canonical_hold_interval_position_unique=1
+canonical_hold_interval_max_abs_velocity=0
+canonical_hold_interval_max_abs_acceleration=0
+
+[circle_mj_v2]
+recording_id=circle_mj_v2__20260720_040223
+source_sha256=f78a168a9f14a004957c9f59ce33ee3fc01cc13fff16e315fbf83c719c2c8617
+artifact_source_sha256=f78a168a9f14a004957c9f59ce33ee3fc01cc13fff16e315fbf83c719c2c8617
+source_hash_equal=true
+setup_sha256=d904c67cc30c61321b1ea0ba0b4ebee3f637122e72261a363c1dd0aee33cb804
+source_duration_s=63.000000000
+hold_start_s=60.000000000
+source_hold_interval_rows=2
+source_hold_interval_phases={'draw': 1, 'hold': 1}
+source_hold_interval_pose_unique=1
+canonical_rows=6301
+canonical_hold_interval_rows=301
+canonical_hold_interval_phases={'draw': 1, 'hold': 300}
+canonical_hold_interval_position_unique=1
+canonical_hold_interval_max_abs_velocity=0
+canonical_hold_interval_max_abs_acceleration=0
+
+deployment_gate
+deployment_allowed: false

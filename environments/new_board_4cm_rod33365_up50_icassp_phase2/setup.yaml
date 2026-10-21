@@ -1,0 +1,25 @@
+schema_version: 1
+setup_id: new_board_4cm_direct_feature_rod333p65_d5_up50_icassp_phase2
+work_frame:
+  parent_frame: base
+  child_frame: plane1
+  # Direct UR Installation Plane Feature pose. XYZ is copied without a sign
+  # change and the rotation vector is converted directly to a ROS quaternion.
+  # No normal rectification, in-plane alignment, or wall-derived correction is
+  # permitted. The Feature origin is the confirmed sensor-board in-plane
+  # center; the current physical sensor surface is separately fixed at
+  # plane1 z=-0.007 m in environment.yaml/zones.yaml.
+  teach_pendant_pose_xyz_rotvec:
+    [-0.06528, -0.46973, 0.18244, 1.1583, 2.91549, -0.00016]
+  # The alias is safe because plane1 is exactly the original Feature pose.
+  aliases: [new_board_4cm]
+tool:
+  tool_id: rod_333p65mm_d5mm
+  parent_link: tool0
+  tip_frame: rod_tip
+  tip_orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  rod:
+    axis_in_parent_xyz: [0.0, 0.0, 1.0]
+    length_m: 0.33365
+    radius_m: 0.0025
+    sphere_spacing_m: 0.005

@@ -1,0 +1,12 @@
+schema_version: 1
+robot_type: ur5
+robot_name: ur
+source_kinematics:
+  path: robot/driver_kinematics.yaml
+  sha256: 412169bc350ee405f97a83b30df817913afeba0f8f4bd59a00fdc6267aca0b6c
+generated_urdf:
+  path: robot/assets/ur5.urdf
+  sha256: 2ef10ba4989720ebcc9e49c64b0ecb49ac94f20ef20147ad1e841d058258c9e6
+generator:
+  script: scripts/generate_ur_assets.sh
+  ros_distro: jazzy

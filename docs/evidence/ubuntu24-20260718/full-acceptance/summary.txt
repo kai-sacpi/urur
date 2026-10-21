@@ -1,0 +1,45 @@
+acceptance_root=/home/huaxin/Codes/ur-waypoint/runs/mj_full_acceptance__20260718_234438
+generated_at=2026-07-19T01:06:29+08:00
+deployment_gate=false
+
+legacy_matrix=/home/huaxin/Codes/ur-waypoint/runs/localizaiton_ros2_profiles__20260718_215700/compile_matrix.tsv
+legacy_cases=20
+legacy_endpoint_rest_failures=8
+legacy_fixed_time_dynamics_failures=9
+legacy_ik_frontier_failures=1
+legacy_timeouts=2
+legacy_successes=0
+
+successful_full_chains=3
+horizontal_line_mj|recording=horizontal_line_mj__20260718_234606|duration_s=33|points=3301|source=122/122|max_source_time_error_s=0|uniform_time_scale=1|telemetry_rows=4126|speed_scaling_min=1|speed_scaling_max=1|source_sha256=90127cb188a951de0a21c0d6f654eda1c2887fc8e0fea6e2bb9a1903a8d333d6
+shallow_s_mj|recording=shallow_s_mj__20260719_001742|duration_s=33|points=3301|source=122/122|max_source_time_error_s=0|uniform_time_scale=1|telemetry_rows=4132|speed_scaling_min=1|speed_scaling_max=1|source_sha256=09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18
+circle_mj_v2|recording=circle_mj_v2__20260719_003343|duration_s=63|points=6301|source=122/122|max_source_time_error_s=0|uniform_time_scale=1|telemetry_rows=7881|speed_scaling_min=1|speed_scaling_max=1|source_sha256=f78a168a9f14a004957c9f59ce33ee3fc01cc13fff16e315fbf83c719c2c8617
+
+hold_evidence
+trajectory	hold_start_s	hold_end_s	rows	max_position_delta_rad	max_abs_velocity_rad_s	max_abs_acceleration_rad_s2
+horizontal_line_mj	30	33	301	0	0	0
+shallow_s_mj	30	33	301	0	0	0
+circle_mj_v2	60	63	301	0	0	0
+
+rejected_candidates
+ellipse_attempt_1|exit=2|max_tip_source_position_error_m=0.00116549884772993|limit_m=0.001|source_time_s=15.25|no_runtime_change=true
+ellipse_attempt_2|exit=2|max_tip_source_position_error_m=0.0010630905648113683|limit_m=0.001|source_time_s=16.5|no_runtime_change=true
+shallow_s_attempt_1|exit=2|actual_end_s=33.050038774|allowed_end_s=33.05|excess_s=0.000038774|same_csv_retry_succeeded=true
+
+exit_codes
+horizontal_line_mj/build.exit_code=0
+horizontal_line_mj/inspect.exit_code=0
+horizontal_line_mj/play.exit_code=0
+ellipse_mj/build.exit_code=2
+ellipse_mj/build_retry.exit_code=2
+shallow_s_mj/build.exit_code=2
+shallow_s_mj/build_retry.exit_code=0
+shallow_s_mj/inspect.exit_code=0
+shallow_s_mj/play.exit_code=0
+circle_mj_v2/build.exit_code=0
+circle_mj_v2/inspect.exit_code=0
+circle_mj_v2/play.exit_code=0
+
+live_ros_runtime_processes
+gpu_compute_processes
+4037362, /opt/microsoft/msedge/msedge --type=gpu-process --ozone-platform=x11 --crashpad-handler-pid=4037312 --enable-crash-reporter=? --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --metrics-shmem-handle=4?i?5701643163518951632?1991447303924719980?262144 --field-trial-handle=3?i?5147578286727091233?12644812524595115845?262144 --variations-seed-version --pseudonymization-salt-handle=7?i?4359828459937368496?12757795574635569163?4 --trace-process-track-uuid=3190708988185955192, 23 MiB

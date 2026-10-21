@@ -1,0 +1,62 @@
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+htmlcov/
+
+# Local Python and locked source environments
+.venv/
+.deps/
+.cache/
+
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Runtime outputs
+runs/*
+!runs/.gitkeep
+environments/*/recordings/*
+!environments/*/recordings/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+
+# New generated datasets and packages stay outside source releases.
+# Previously tracked examples/history are not removed by these rules.
+*.csv
+*.npy
+*.npz
+*.tar
+*.tar.gz
+*.tar.zst
+*.tgz
+*.zip
+*.sha256
+/artifacts/
+/backgrounds/
+/reports/
+/environments/*/trajectories/
+/workstation_magtrack/**/runs/
+/workstation_magtrack/**/backgrounds/
+/workstation_magtrack/**/recordings/
+/workstation_magtrack/**/trajectories/
+/workstation_magtrack/**/batches/
+/workstation_magtrack/**/planning/
+/workstation_magtrack/**/reports/
+/workstation_magtrack/**/artifacts/
+/workstation_magtrack/collection/raw_authorizations/
+/workstation_magtrack/collection/prepared_parking/
+/workstation_magtrack/collection/commissioning/
+/workstation_magtrack/provenance/runtime_sources/
+/workstation_magtrack/provenance/runtime_fingerprint.json
+/workstation_magtrack/docs/dataset_index_20261018/accepted_*.json
+/workstation_magtrack/docs/dataset_index_20261018/index_build_report.json
+*.log
+.mla_stack.lock
+.campaign.lock

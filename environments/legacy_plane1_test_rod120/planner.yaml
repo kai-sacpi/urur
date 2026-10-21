@@ -1,0 +1,43 @@
+schema_version: 1
+backend:
+  type: curobo_v2
+  device: cuda:0
+  revision_lock: curobo.lock
+curobo:
+  warmup_on_start: true
+  robot_config: robot/curobo_robot.yaml
+  collision_spheres: robot/collision_spheres.yaml
+  interpolation_buffer_size: 65536
+timed_path:
+  preserve_input_timestamps: true
+  nominal_output_dt_s: 0.010
+  max_translation_step_m: 0.002
+  max_rotation_step_deg: 1.0
+ik:
+  candidates_per_pose: 32
+  use_previous_solution_seed: true
+  random_seed_reserve: 8
+  reject_branch_jump_rad: 0.35
+  beam_width: 128
+optimization:
+  joint_distance_weight: 1.0
+  velocity_weight: 0.1
+  acceleration_weight: 0.1
+  # Fixed-time joint-path smoothness only. This weight cannot change any
+  # authoritative Pose or time_s; the final analytic jerk limit remains hard.
+  jerk_weight: 20.0
+  joint_limit_weight: 0.1
+  collision_weight: 1.0
+  singularity_weight: 0.05
+validation:
+  tip_position_tolerance_m: 0.001
+  tip_orientation_tolerance_deg: 0.5
+  internal_tolerance_guard_ratio: 0.8
+  minimum_collision_distance_m: 0.005
+  maximum_branch_jump_rad: 0.35
+  maximum_time_error_s: 0.000001
+  maximum_derivative_error: 0.0001
+limits:
+  on_violation: reject
+  allow_uniform_time_scale: false
+  max_uniform_time_scale: 1.0

@@ -1,0 +1,4 @@
+trajectory	hold_start_s	hold_end_s	rows	max_position_delta_rad	max_abs_velocity_rad_s	max_abs_acceleration_rad_s2
+horizontal_line_mj	30	33	301	0	0	0
+shallow_s_mj	30	33	301	0	0	0
+circle_mj_v2	60	63	301	0	0	0

@@ -1,0 +1,241 @@
+schema_version: 1
+recording_id: shallow_s_mj__20260719_001742
+status: validated
+environment_id: lab_wall_a
+trajectory_id: shallow_s_mj
+robot:
+  type: ur5
+  joint_names:
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+trajectory:
+  duration_s: 33
+  point_count: 3301
+  source_waypoint_count: 122
+  matched_source_waypoint_count: 122
+  source_duration_s: 33
+  max_source_time_error_s: 0
+  nominal_dt_s: 0.01
+  interpolation: spline
+  uniform_time_scale: 1
+  max_joint_velocity_ratio: 0.01293187623415089
+  max_joint_acceleration_ratio: 0.0021533907189071519
+  max_joint_jerk_ratio: 0.00014138096794340526
+  fields:
+    - position
+    - velocity
+    - acceleration
+validation:
+  schema_version: 1
+  simulation_completed: true
+  controller_result: succeeded
+  simulation_execution_contract_revision: 1
+  simulation_controller_name: joint_trajectory_controller
+  simulation_controller_type: joint_trajectory_controller/JointTrajectoryController
+  simulation_controller_state: active
+  simulation_controller_claimed_interfaces:
+    - elbow_joint/position
+    - shoulder_lift_joint/position
+    - shoulder_pan_joint/position
+    - wrist_1_joint/position
+    - wrist_2_joint/position
+    - wrist_3_joint/position
+  simulation_controller_required_command_interfaces:
+    - elbow_joint/position
+    - shoulder_lift_joint/position
+    - shoulder_pan_joint/position
+    - wrist_1_joint/position
+    - wrist_2_joint/position
+    - wrist_3_joint/position
+  simulation_controller_required_state_interfaces:
+    - elbow_joint/position
+    - elbow_joint/velocity
+    - shoulder_lift_joint/position
+    - shoulder_lift_joint/velocity
+    - shoulder_pan_joint/position
+    - shoulder_pan_joint/velocity
+    - wrist_1_joint/position
+    - wrist_1_joint/velocity
+    - wrist_2_joint/position
+    - wrist_2_joint/velocity
+    - wrist_3_joint/position
+    - wrist_3_joint/velocity
+  simulation_hardware_name: ur5
+  simulation_hardware_type: system
+  simulation_hardware_plugin: mock_components/GenericSystem
+  simulation_hardware_state_id: 3
+  simulation_hardware_state_label: active
+  actual_joint_recorded: true
+  controller_state_recorded: true
+  joint_frames_recorded: true
+  actual_tip_recorded: true
+  point_count: 3301
+  duration_s: 33
+  source_waypoint_count: 122
+  matched_source_waypoint_count: 122
+  source_duration_s: 33
+  max_source_time_error_s: 0
+  sample_dt_s: 0.01
+  max_missing_samples_allowed: 0
+  max_time_jitter_s_allowed: 0.002
+  require_action_success: true
+  actual_joint_sample_count: 4125
+  actual_joint_first_trajectory_time_s: 0.0042607230000000001
+  actual_joint_last_trajectory_time_s: 32.995721926000002
+  actual_joint_coverage_duration_s: 32.991461203
+  actual_joint_max_time_interval_s: 0.0097021850000018617
+  actual_joint_max_time_jitter_s: 0
+  actual_joint_missing_sample_estimate: 0
+  controller_sample_count: 4125
+  controller_first_trajectory_time_s: 0.0042099429999999998
+  controller_last_trajectory_time_s: 32.995669440999997
+  controller_coverage_duration_s: 32.991459497999998
+  controller_max_time_interval_s: 0.008776565000005121
+  controller_max_time_jitter_s: 0
+  controller_missing_sample_estimate: 0
+  joint_frame_sample_count: 33000
+  joint_frame_stream_count: 8
+  max_joint_frame_quaternion_norm_error: 3.3306690738754696e-16
+  joint_frame_streams:
+    - frame_id: forearm_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+    - frame_id: rod_tip
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+    - frame_id: shoulder_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 1.1102230246251565e-16
+    - frame_id: tool0
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+    - frame_id: upper_arm_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+    - frame_id: wrist_1_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+    - frame_id: wrist_2_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 3.3306690738754696e-16
+    - frame_id: wrist_3_link
+      sample_count: 4125
+      first_trajectory_time_s: 0.0042607230000000001
+      last_trajectory_time_s: 32.995721926000002
+      coverage_duration_s: 32.991461203
+      max_time_interval_s: 0.0097021850000018617
+      max_time_jitter_s: 0
+      missing_sample_estimate: 0
+      max_quaternion_norm_error: 2.2204460492503131e-16
+  actual_tip_sample_count: 4125
+  actual_tip_first_trajectory_time_s: 0.0042607230000000001
+  actual_tip_last_trajectory_time_s: 32.995721926000002
+  actual_tip_coverage_duration_s: 32.991461203
+  actual_tip_max_time_interval_s: 0.0097021850000018617
+  actual_tip_max_time_jitter_s: 0
+  actual_tip_missing_sample_estimate: 0
+  actual_tip_max_quaternion_norm_error: 2.2204460492503131e-16
+  max_quaternion_norm_error_allowed: 0.001
+  max_completion_overrun_s_allowed: 0.050000000000000003
+  max_speed_scaling_error: 0
+  speed_scaling_evidence: locked_standard_unscaled_joint_trajectory_controller
+  max_controller_reference_position_error_rad: 0.00011517282470707713
+  max_controller_reference_position_error_rad_allowed: 0.02
+  max_controller_reference_velocity_error_rad_s: 3.82361729282122e-05
+  max_controller_reference_velocity_error_rad_s_allowed: 0.10000000000000001
+  max_joint_position_tracking_error_rad: 2.7354141911573038e-06
+  max_joint_position_tracking_error_rad_allowed: 0.02
+  max_joint_velocity_tracking_error_rad_s: 0.00060275699778207167
+  max_joint_velocity_tracking_error_rad_s_allowed: 0.10000000000000001
+  max_actual_controller_position_error_rad: 0
+  max_actual_controller_position_error_rad_allowed: 0.02
+  max_actual_controller_velocity_error_rad_s: 0
+  max_actual_controller_velocity_error_rad_s_allowed: 0.10000000000000001
+  max_frame_fk_position_error_m: 0.00043344400345457702
+  max_frame_fk_position_error_m_allowed: 0.001
+  max_frame_fk_orientation_error_deg: 0.077259603743146443
+  max_frame_fk_orientation_error_deg_allowed: 0.10000000000000001
+  max_tip_fk_position_error_m: 0.00043342092206858485
+  max_tip_fk_position_error_m_allowed: 0.001
+  max_tip_fk_orientation_error_deg: 1.4080795695456205e-05
+  max_tip_fk_orientation_error_deg_allowed: 0.10000000000000001
+  max_tip_source_position_error_m: 0.00041014959046308105
+  max_tip_source_position_error_m_allowed: 0.001
+  max_tip_source_orientation_error_deg: 2.2263692832568142e-05
+  max_tip_source_orientation_error_deg_allowed: 0.5
+  uniform_time_scale: 1
+  max_joint_velocity_ratio: 0.01293187623415089
+  max_joint_acceleration_ratio: 0.0021533907189071519
+  max_joint_jerk_ratio: 0.00014138096794340526
+  max_tip_position_error_m: 1.5207792430081486e-05
+  max_tip_orientation_error_deg: 3.5490704003306498e-05
+  minimum_collision_distance_m: 0.011272231675684474
+  max_scene_collision_cost: 0
+  max_self_collision_cost: 0
+  max_joint_bound_cost: 0
+  checked_sample_count: 3301
+hashes:
+  zones.yaml: 01e2afab7aec060af943be74570c60980414b53b965f95f093adb49ad6306cd7
+  recording.yaml: 1ed79d9b44f363a2941cd4b33bb9581c88e8d878a5a82b2cc57599c9779fe650
+  frames.yaml: a0ff825ce1b9f59d32aa80f15a220db3652f0c0df8d5044f237f0c9e31eb5336
+  meshes/.gitkeep: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+  tcp.yaml: 54d994c37cd51d8712d6e027e2c43e492ed0b395c11ba20f52285391e8a2b4fd
+  environment.yaml: 92eaf746d2f7dfe1128df505070803520798140ed05f8c0d6c9affa6345e7fac
+  robot/collision_spheres.yaml: 494328c87735a54bd9cd7159f10c758f970f3e0ccad73ffeafe476b58b06189f
+  planner.yaml: 49b5f3975c716215f19eba75dbb9fee790364a1a19cad5576b290dd13aa07cab
+  controllers.yaml: ef92b4d96a4edc7fc4267be5ff318fed5923e24192a4321052864ad600867a03
+  robot/assets/ur5.urdf: b74933647a696bf01cc0d557fc9d3209562d51262891df2a4a83963f89d07681
+  robot/asset_provenance.yaml: 468c0572af41ae5d93048b954e11b609680a5c5e16a7c48e76489a03519a90f4
+  robot/calibrated_kinematics.yaml: cdf2ff08c22d6397bdb906726e37e3be785c1cf5952fe6fc45816b746c26caca
+  robot/curobo_robot.yaml: 21e314b2e50d9e87e7654ff82c048334a837ae845412c1f7c4a93bb6b82b2ff5
+  robot/driver_kinematics.yaml: 4559bd027c93ce7c0e2a343d6f71f742fe4a67ea9d7ef67535189f4efbe9c3ac
+  robot/robot_model.yaml: 6203d3ec28829bc9a6ddad50d7583449089e902f01375b0538a29e398054b14c
+  source_trajectory: 09ccab0f0f57a856942b46608d66626dc636616dcb361e5fddfa9b18f3d3df18
+  joint_trajectory: 16635bf774d1ad2045f643710c03065ea7fcb1bdab62402575ec41b93c0d9575
+  curobo_revision: a35a708ecfbb26eb9ab2d7ef22c65919c4fae4a9

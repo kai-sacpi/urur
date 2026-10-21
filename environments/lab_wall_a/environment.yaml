@@ -1,0 +1,5 @@
+schema_version: 1
+environment_id: lab_wall_a
+description: Nominal UR5 wall-drawing integration environment
+deployment_mode: simulation
+robot_model: ur5

@@ -1,0 +1,24 @@
+schema_version: 1
+setup_id: mla_short_new_board_mla_sensor_center_rod190_d5
+work_frame:
+  parent_frame: base
+  child_frame: plane1
+  # Raw base -> new_board_mla pose read from the UR Dashboard on 2026-09-04.
+  # The authoritative plane1 origin is the verified sensor-board center,
+  # located 53 mm along the Feature's local +Z.  Orientation is unchanged.
+  teach_pendant_pose_xyz_rotvec:
+    [-0.08533, -0.48683, 0.24284, 1.16388, 2.91348, 0.00029]
+  feature_to_work_frame_translation_m: [0.0, 0.0, 0.053]
+  # new_board_mla is not an identity alias because its origin remains 53 mm
+  # away from the sensor-centered plane1 origin.
+  aliases: []
+tool:
+  tool_id: rod_190mm_d5mm
+  parent_link: tool0
+  tip_frame: rod_tip
+  tip_orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  rod:
+    axis_in_parent_xyz: [0.0, 0.0, 1.0]
+    length_m: 0.190
+    radius_m: 0.0025
+    sphere_spacing_m: 0.005

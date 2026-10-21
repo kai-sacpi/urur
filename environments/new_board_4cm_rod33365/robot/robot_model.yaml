@@ -1,0 +1,22 @@
+schema_version: 1
+robot:
+  type: ur5
+  base_link: base_link
+  tool_link: tool0
+  joint_names:
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+  # Operator-confirmed joint posture read directly from the UR teach pendant on
+  # 2026-08-04: [-129.73, -78.05, -60.56, -129.09, 90.14, 90.00] deg.
+  # Every new_board execution must first reach this hash-bound startup posture,
+  # then separately reach the recording's first point. Both motions are planned
+  # and collision-validated outside the authoritative recording window.
+  home_joint_positions: [-2.264215638612, -1.362229481182, -1.056971395008, -2.253045531399, 1.573239787748, 1.570796326795]
+  limits:
+    velocity_rad_s: [1.5, 1.5, 1.5, 2.0, 2.0, 2.0]
+    acceleration_rad_s2: [3.0, 3.0, 3.0, 4.0, 4.0, 4.0]
+    jerk_rad_s3: [30.0, 30.0, 30.0, 40.0, 40.0, 40.0]

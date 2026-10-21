@@ -1,0 +1,21 @@
+schema_version: 1
+contact_policy:
+  allowed_contact_link: rod_tip
+  allowed_surface: drawing_plane
+  maximum_tip_penetration_m: 0.001
+  minimum_non_tip_clearance_m: 0.005
+curobo_scene:
+  cuboid:
+    floor:
+      frame_id: plane1
+      dims: [2.0, 2.0, 0.10]
+      pose: [-0.40, 0.0, 0.65, 0.7071067811865476, 0.0, 0.7071067811865476, 0.0]
+    rear_keepout:
+      frame_id: plane1
+      dims: [0.10, 1.20, 1.20]
+      pose: [0.20, 0.0, 0.95, 0.7071067811865476, 0.0, 0.7071067811865476, 0.0]
+analysis_zones:
+  drawing_plane:
+    frame_id: plane1
+    normal_xyz: [0.0, 0.0, 1.0]
+    offset_m: 0.0

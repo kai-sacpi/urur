@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>hx_waypoint_bringup</name>
+  <version>0.1.0</version>
+  <description>Simulation and real-robot launch files for hx waypoint.</description>
+  <maintainer email="hxhou0207@gmail.com">Huaxin Hou</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>hx_waypoint_curobo</exec_depend>
+  <exec_depend>hx_waypoint_runtime</exec_depend>
+  <exec_depend>hx_waypoint_tools</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>moveit_configs_utils</exec_depend>
+  <exec_depend>moveit_servo</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>ur_client_library</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+  <exec_depend>ur_moveit_config</exec_depend>
+  <exec_depend>ur_robot_driver</exec_depend>
+  <exec_depend>warehouse_ros_sqlite</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

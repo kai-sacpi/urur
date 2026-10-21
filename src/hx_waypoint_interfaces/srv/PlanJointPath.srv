@@ -1,0 +1,13 @@
+# Request: plan one collision-aware prepare motion in the server's fixed environment.
+string environment_id
+string[] joint_names
+float64[] current_positions
+float64[] target_positions
+---
+# Response: one complete q/qd/qdd/time trajectory or an explicit failure.
+bool success
+string message
+string curobo_revision
+string[] environment_paths
+string[] environment_sha256
+trajectory_msgs/JointTrajectory trajectory

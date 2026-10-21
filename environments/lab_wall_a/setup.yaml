@@ -1,0 +1,21 @@
+schema_version: 1
+setup_id: lab_wall_a_nominal_rod264
+work_frame:
+  parent_frame: base
+  child_frame: plane1
+  # Placeholder migration of the previous base_link -> wall_draw_frame pose.
+  # Replace these six authoritative UR teach-pendant values for the real setup.
+  teach_pendant_pose_xyz_rotvec:
+    [-0.65, 0.0, 0.30, -2.221441469079183, 0.0, -2.221441469079183]
+  # Existing authoritative CSV files retain their original frame id unchanged.
+  aliases: [wall_draw_frame]
+tool:
+  tool_id: rod_264mm_nominal
+  parent_link: tool0
+  tip_frame: rod_tip
+  tip_orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  rod:
+    axis_in_parent_xyz: [0.0, 0.0, 1.0]
+    length_m: 0.264
+    radius_m: 0.008
+    sphere_spacing_m: 0.012

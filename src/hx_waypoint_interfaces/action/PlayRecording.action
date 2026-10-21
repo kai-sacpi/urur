@@ -1,0 +1,17 @@
+# Goal
+string environment_id
+string environment_path
+string recording_id
+bool auto_prepare
+bool externally_prepared_start
+---
+# Result
+bool success
+string telemetry_path
+string message
+---
+# Feedback
+string state
+float64 trajectory_time_s
+float32 progress
+string detail

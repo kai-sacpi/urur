@@ -1,0 +1,10 @@
+schema_version: 1
+repository: https://github.com/NVlabs/curobo.git
+commit: a35a708ecfbb26eb9ab2d7ef22c65919c4fae4a9
+source_tree: 369c492056ba8a735c00f11342062dfb22af2d90
+version_hint: "0.8.0+v2"
+python_abi: "cp312"
+cuda_toolkit: "12.8"
+pytorch_index: https://download.pytorch.org/whl/cu128
+pytorch_version: "2.11.0+cu128"
+minimum_nvidia_driver: "570.26"

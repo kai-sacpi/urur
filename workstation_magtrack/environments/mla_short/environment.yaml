@@ -1,0 +1,61 @@
+schema_version: 1
+environment_id: mla_short
+description: "MLA sensor-centered plane1 derived from new_board_mla, identical to mla except for the 190 mm TCP rod"
+deployment_mode: simulation
+robot_model: ur5
+calibration:
+  dashboard:
+    robot_ip: 192.168.1.99
+    variable: new_board_mla
+    source_type: ur_installation_plane_feature
+    pose_semantics: base_to_feature
+    raw_base_to_feature_pose_xyz_rotvec:
+      [-0.08533, -0.48683, 0.24284, 1.16388, 2.91348, 0.00029]
+  tf_binding:
+    policy: feature_local_translation
+    parent_frame: base
+    child_frame: plane1
+    source_feature: new_board_mla
+    translation_policy: compose_feature_with_local_offset
+    local_translation_frame: feature
+    local_translation_m: [0.0, 0.0, 0.053]
+    rotation_policy: ur_rotation_vector_to_quaternion_xyzw
+    orientation_correction: none
+    wall_used_as_pose_reference: false
+    setup_pose_must_match_dashboard_pose: true
+    setup_raw_pose_matches_dashboard_pose: true
+  sensor_geometry:
+    # Operator-confirmed geometry rebased so the sensor-board center is the
+    # plane1 origin.  Local -Z points physically upward.
+    sensor_center_local_z_m: 0.0
+    actual_sensor_plane_local_z_m: 0.0
+    protected_height_above_sensor_m: 0.060
+    board_size_xy_m: [0.40, 0.40]
+    board_center_matches_feature_origin: false
+    board_center_matches_work_frame_origin: true
+    board_center_in_plane1_xy_m: [0.0, 0.0]
+    keepout_local_z_min_m: -0.060
+    # The +Z face conservatively reaches base_link z=0 across the complete
+    # tilted 400 x 400 mm footprint; the farthest corner determines this bound.
+    keepout_local_z_max_m: 0.19096485659512854
+    tabletop_base_link_z_m: 0.0
+    tabletop_reach_policy: cover_full_board_footprint
+    model_status: mla_new_board_mla_sensor_centered_plane1_to_tabletop
+workspace_boundaries:
+  # All non-sensor collision bodies retain their previous physical base_link
+  # poses.  Encoding the fixed walls in base_link prevents future work-frame
+  # calibration changes from moving real obstacles.
+  frame_id: base_link
+  representation: fixed_base_link_collision_cuboids
+  physical_pose_policy: preserve_pre_recalibration_mla_scene
+  remove_collision_object_ids: [floor, rear_keepout]
+  ground:
+    frame_id: base_link
+    size_xy_m: [3.0, 3.0]
+    top_z_m: 0.0
+    thickness_m: 0.10
+    ur5_nominal_reach_m: 0.85
+    fixed_base_cutout_size_xy_m: [0.24, 0.24]
+    fixed_base_cutout_is_unfilled: true
+  fixed_collision_object_ids:
+    [x_positive_limit_wall, y_positive_limit_wall, top_negative_z_panel]

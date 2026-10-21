@@ -1,0 +1,13 @@
+schema_version: 1
+environment_id: legacy_plane1_rod217
+description: Measured-candidate p15 free-space test profile for legacy desk trajectories with the 0.217 m play_trajectory TCP default
+deployment_mode: simulation
+robot_model: ur5
+legacy_test_profile:
+  profile_id: p15_rod217_desk
+  plane_pose_id: user_measured_candidate_p15
+  raw_base_to_plane1_pose_xyz_rotvec: [-0.00327, -0.50126, 0.27942, -0.00576, -0.00076, 0.7778]
+  base_link_conversion: controlled_urdf_base_link_to_base_rz_pi
+  historical_per_file_frame_binding: false
+  rod_length_m: 0.217
+  selection_basis: fixed desk family; horizontal tool axis makes the longer rod move tool0 toward the robot base

@@ -1,0 +1,137 @@
+schema_version: 1
+simulation_completed: true
+controller_result: succeeded
+actual_joint_recorded: true
+controller_state_recorded: true
+joint_frames_recorded: true
+actual_tip_recorded: true
+point_count: 2252
+duration_s: 20.925000000000001
+source_waypoint_count: 10
+matched_source_waypoint_count: 10
+source_duration_s: 20.925000000000001
+max_source_time_error_s: 0
+sample_dt_s: 0.01
+max_missing_samples_allowed: 0
+max_time_jitter_s_allowed: 0.002
+require_action_success: true
+actual_joint_sample_count: 2619
+actual_joint_first_trajectory_time_s: 0.0078196380000000003
+actual_joint_last_trajectory_time_s: 20.951141947
+actual_joint_coverage_duration_s: 20.943322308999999
+actual_joint_max_time_interval_s: 0.008812686999998931
+actual_joint_max_time_jitter_s: 0
+actual_joint_missing_sample_estimate: 0
+controller_sample_count: 2619
+controller_first_trajectory_time_s: 0.0075881669999999998
+controller_last_trajectory_time_s: 20.950934826000001
+controller_coverage_duration_s: 20.943346658999999
+controller_max_time_interval_s: 0.0085518769999985977
+controller_max_time_jitter_s: 0
+controller_missing_sample_estimate: 0
+joint_frame_sample_count: 20952
+joint_frame_stream_count: 8
+max_joint_frame_quaternion_norm_error: 2.2204460492503131e-16
+joint_frame_streams:
+  - frame_id: forearm_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: rod_tip
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: shoulder_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 1.1102230246251565e-16
+  - frame_id: tool0
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: upper_arm_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: wrist_1_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: wrist_2_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+  - frame_id: wrist_3_link
+    sample_count: 2619
+    first_trajectory_time_s: 0.0078196380000000003
+    last_trajectory_time_s: 20.951141947
+    coverage_duration_s: 20.943322308999999
+    max_time_interval_s: 0.008812686999998931
+    max_time_jitter_s: 0
+    missing_sample_estimate: 0
+    max_quaternion_norm_error: 2.2204460492503131e-16
+actual_tip_sample_count: 2619
+actual_tip_first_trajectory_time_s: 0.0078196380000000003
+actual_tip_last_trajectory_time_s: 20.951141947
+actual_tip_coverage_duration_s: 20.943322308999999
+actual_tip_max_time_interval_s: 0.008812686999998931
+actual_tip_max_time_jitter_s: 0
+actual_tip_missing_sample_estimate: 0
+actual_tip_max_quaternion_norm_error: 2.2204460492503131e-16
+max_quaternion_norm_error_allowed: 0.001
+max_completion_overrun_s_allowed: 0.050000000000000003
+max_speed_scaling_error: 0
+max_controller_reference_position_error_rad: 0.00096021143392044372
+max_controller_reference_position_error_rad_allowed: 0.02
+max_controller_reference_velocity_error_rad_s: 0.010604805867084458
+max_controller_reference_velocity_error_rad_s_allowed: 0.10000000000000001
+max_joint_position_tracking_error_rad: 2.1708282320176409e-05
+max_joint_position_tracking_error_rad_allowed: 0.02
+max_joint_velocity_tracking_error_rad_s: 0.0053752227481377781
+max_joint_velocity_tracking_error_rad_s_allowed: 0.10000000000000001
+uniform_time_scale: 1
+max_joint_velocity_ratio: 0.061836918093320904
+max_joint_acceleration_ratio: 0.46545874454967207
+max_joint_jerk_ratio: 0.73786262879299591
+max_tip_position_error_m: 0.00059130542915066561
+max_tip_orientation_error_deg: 0.037932982951351273
+minimum_collision_distance_m: 0.011255482770502589
+max_scene_collision_cost: 0
+max_self_collision_cost: 0
+max_joint_bound_cost: 0
+checked_sample_count: 2252

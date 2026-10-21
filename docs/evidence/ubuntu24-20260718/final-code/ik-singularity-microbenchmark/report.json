@@ -1,0 +1,89 @@
+{
+  "candidate_dtype": "float32",
+  "candidate_seed": 20260719,
+  "candidate_shape": [
+    2048,
+    6
+  ],
+  "chunk_size": 2048,
+  "environment_id": "legacy_plane1_test_p10_rod120",
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "passed": true,
+  "python_module_path": "/home/huaxin/Codes/ur-waypoint/src/hx_waypoint_curobo/hx_waypoint_curobo/curobo_adapter_v2.py",
+  "repetitions": 3,
+  "results": [
+    {
+      "batched_median_seconds": 0.0009590438567101955,
+      "batched_seconds": [
+        0.0011823598761111498,
+        0.0009590438567101955,
+        0.000939458841457963
+      ],
+      "candidate_count": 128,
+      "candidate_prefix_sha256": "654cd8f8af757225816dc2c2f6ee5fcd978bc579cdedaa2c330ad36025b173d9",
+      "exact_equal": true,
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "scalar_median_seconds": 0.07713944395072758,
+      "scalar_seconds": [
+        0.07853613188490272,
+        0.07709880592301488,
+        0.07713944395072758
+      ],
+      "speedup": 80.43369801182891
+    },
+    {
+      "batched_median_seconds": 0.0010580949019640684,
+      "batched_seconds": [
+        0.0015190860722213984,
+        0.0010580949019640684,
+        0.0010387590155005455
+      ],
+      "candidate_count": 512,
+      "candidate_prefix_sha256": "eea997783176523114a82093081ae97433a08912d1fc3c16128e17c8f1e932f9",
+      "exact_equal": true,
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "scalar_median_seconds": 0.3057151339016855,
+      "scalar_seconds": [
+        0.3080850578844547,
+        0.30557756195776165,
+        0.3057151339016855
+      ],
+      "speedup": 288.9297862925222
+    },
+    {
+      "batched_median_seconds": 0.001725626876577735,
+      "batched_seconds": [
+        0.002201839117333293,
+        0.001725626876577735,
+        0.0016378560103476048
+      ],
+      "candidate_count": 2048,
+      "candidate_prefix_sha256": "706db707708432b235f29b96f0b9f358f33dde043b09ec9df29b2d5bcee6a522",
+      "exact_equal": true,
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "scalar_median_seconds": 1.226834210800007,
+      "scalar_seconds": [
+        1.226834210800007,
+        1.224731280002743,
+        1.226868012920022
+      ],
+      "speedup": 710.9498741889474
+    }
+  ],
+  "schema_version": 1,
+  "scope": "fixed-candidate batched-vs-scalar singularity microbenchmark only",
+  "torch_cuda_version": "12.8",
+  "torch_version": "2.11.0+cu128",
+  "trajectory_files_opened": false
+}

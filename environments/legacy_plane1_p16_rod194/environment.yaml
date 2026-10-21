@@ -1,0 +1,17 @@
+schema_version: 1
+environment_id: legacy_plane1_p16_rod194
+description: User-selected p16 flipped-normal free-space test profile for legacy quaternion snake trajectories with the active 0.194 m go_to_point TCP default
+deployment_mode: simulation
+robot_model: ur5
+legacy_test_profile:
+  profile_id: p16_rod194_quaternion_flipped_normal
+  plane_pose_id: user_measured_candidate_p16
+  plane_pose_registry: environments/legacy_plane1_pose_registry.yaml
+  plane_pose_selection_evidence: p16 is the active candidate in the user-provided conversion script
+  raw_base_to_plane1_pose_xyz_rotvec: [-0.03413, -0.38168, 0.33594, -1.25152, 2.88032, -0.01303]
+  base_link_conversion: controlled_urdf_base_link_to_base_rz_pi
+  historical_per_file_frame_binding: false
+  historical_per_file_frame_binding_status: unknown_not_recovered
+  plane_normal_direction: base_link_negative_z
+  rod_length_m: 0.194
+  selection_basis: fixed quaternion snake family; preserves the legacy rod default and uses the p16 candidate currently selected by the user; p16 has the opposite plane-Z normal direction from p1-p15

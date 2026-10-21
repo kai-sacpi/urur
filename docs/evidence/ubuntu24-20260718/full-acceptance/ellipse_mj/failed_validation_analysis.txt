@@ -1,0 +1,6 @@
+actual_rows 4126
+actual_time_range 0.001262181 33.001333058
+max_tip_source_position_error_m 0.00116549884772993
+position_at_source_time,actual_time,index,actual,expected (15.25, 15.24925688, 1906, array([ 0.65000003, -0.02491467,  0.29675502]), array([ 0.65      , -0.02487966,  0.29559004]))
+max_tip_source_orientation_error_deg 2.3453211376921392e-05
+orientation_at_source_time,actual_time,index (10.5, 10.497116788, 1312)

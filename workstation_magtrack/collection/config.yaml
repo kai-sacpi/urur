@@ -1,0 +1,29 @@
+schema_version: 1
+environment_id: mla_short
+# Independent collection policy. Do not edit the frozen environment or home.
+parking:
+  name: empty_field_park_IMG_5335
+  joint_names: [shoulder_pan_joint, shoulder_lift_joint, elbow_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint]
+  joint_positions_deg: [-141.48, -84.74, -22.66, 19.73, 99.31, 42.18]
+  source: IMG_5335.JPG
+  source_image_sha256: 45552e04f8af97359f01e331ac599dc4b966a2fbd68db589f941fb3e1924bc11
+  operator_confirmed: true
+  magnetic_interference_status: operator_expected_low_interference_not_measured
+schedule:
+  interval_s: 600
+  background_duration_s: 30
+  pause_after_backgrounds: 3
+  trigger: complete_trajectory_boundary
+  final_return_home: true
+  restart_requires_explicit_confirmation: true
+motion:
+  planning_timeout_s: 120
+  settle_timeout_s: 10
+  max_state_age_s: 0.5
+  settle_velocity_rad_s: 0.01
+  endpoint_tolerance_rad: 0.001
+execution:
+  simulation_only: true
+  real_execution_authorized: false
+  # A new installation-bound release must be made separately before real use.
+  release_note: nominal_trajectories_not_released_for_real_collection

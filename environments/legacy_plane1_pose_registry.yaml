@@ -1,0 +1,149 @@
+schema_version: 1
+registry_id: legacy_plane1_user_teach_pendant_poses
+source:
+  kind: user_provided_ur_teach_pendant_poses
+  parent_frame: base
+  child_frame: plane1
+  representation: [x_m, y_m, z_m, rx_rad, ry_rad, rz_rad]
+  supplied_row_count: 16
+  note: p14 was supplied as an exact repeat of p8 and is retained as its own source row
+base_link_conversion:
+  conversion_id: controlled_urdf_base_link_to_base_rz_pi
+  parent_frame: base_link
+  child_frame: base
+  translation_m: [0.0, 0.0, 0.0]
+  rotation_rpy_rad: [0.0, 0.0, 3.141592653589793]
+  derivation: T_base_link_plane1 = T_base_link_base * T_base_plane1
+quaternion_convention:
+  order: xyzw
+  canonical_sign: qw_nonnegative
+poses:
+  user_measured_candidate_p1:
+    source_row: 1
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.00231, -0.53681, 0.28718, 0.00568, 0.00732, 0.82367]
+    derived_base_link_to_plane1:
+      translation_m: [0.00231, 0.53681, 0.28718]
+      quaternion_xyzw: [0.0035574000638950243, -0.0027603869348256475, -0.9163774012241656, 0.4002901244027888]
+      plane_z_axis_base_link: [-0.008729753310415988, 0.0022111281831632772, 0.9999594503375109]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p2:
+    source_row: 2
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.05497, -0.42631, 0.20931, -0.0014, 0.0117, 0.81032]
+    derived_base_link_to_plane1:
+      translation_m: [0.05497, 0.42631, 0.20931]
+      quaternion_xyzw: [0.005691224478715915, 0.0006810012196754083, -0.9190224571684595, 0.39416350594812644]
+      plane_z_axis_base_link: [-0.009923874552849153, -0.00573825681581855, 0.9999342924025434]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p3:
+    source_row: 3
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.13054, -0.48361, 0.28742, -0.01593, 0.00207, 0.72029]
+    derived_base_link_to_plane1:
+      translation_m: [0.13054, 0.48361, 0.28742]
+      quaternion_xyzw: [0.0010127596558091242, 0.007793846046878909, -0.935814170809499, 0.352406112310509]
+      plane_z_axis_base_link: [0.0035976882955937924, -0.015300988537571001, 0.9998764605633544]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p4:
+    source_row: 4
+    raw_base_to_plane1_pose_xyz_rotvec: [0.43, -0.98712, 0.28679, -0.01416, 0.01658, 0.81215]
+    derived_base_link_to_plane1:
+      translation_m: [-0.43, 0.98712, 0.28679]
+      quaternion_xyzw: [0.008063877009219024, 0.006886881691829996, -0.9186204911008553, 0.39499865579235394]
+      plane_z_axis_base_link: [-0.00937466729502371, -0.019023302442037482, 0.999775089496286]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p5:
+    source_row: 5
+    raw_base_to_plane1_pose_xyz_rotvec: [0.43, -0.98712, 0.28679, 0.06765, -0.02718, 0.80704]
+    derived_base_link_to_plane1:
+      translation_m: [-0.43, 0.98712, 0.28679]
+      quaternion_xyzw: [-0.01322122383494376, -0.03290712996445715, -0.9190380856901702, 0.39257014289010334]
+      plane_z_axis_base_link: [-0.0015350969370043592, 0.0708663269163165, 0.9974846400756173]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p6:
+    source_row: 6
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.10879, -0.55163, 0.3754, 0.00687, -0.00884, 0.80169]
+    derived_base_link_to_plane1:
+      translation_m: [0.10879, 0.55163, 0.3754]
+      quaternion_xyzw: [-0.004302559402187914, -0.0033437311191211495, -0.9207163551577895, 0.39019443972172263]
+      plane_z_axis_base_link: [0.005313463040053538, 0.009514925367862088, 0.9999406148895874]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p7:
+    source_row: 7
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.22399, -0.48041, 0.37757, -0.01239, 0.00612, 0.7976]
+    derived_base_link_to_plane1:
+      translation_m: [0.22399, 0.48041, 0.37757]
+      quaternion_xyzw: [0.0029795074670133453, 0.006032042077826037, -0.9215043897474392, 0.38830966596239275]
+      plane_z_axis_base_link: [-0.0008066579316526904, -0.013431049606212728, 0.9999094740072507]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p8:
+    source_row: 8
+    raw_base_to_plane1_pose_xyz_rotvec: [0.43942, -0.98923, 0.27947, -0.01233, -0.0007, 0.79383]
+    derived_base_link_to_plane1:
+      translation_m: [-0.43942, 0.98923, 0.27947]
+      quaternion_xyzw: [-0.00034088000754823266, 0.006004357847242448, -0.9222393965677353, 0.38657253770287686]
+      plane_z_axis_base_link: [0.005270985645495966, -0.010811361016495052, 0.9999276629753253]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p9:
+    source_row: 9
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.11414, -0.51115, 0.34236, -0.00267, -0.00445, 0.83037]
+    derived_base_link_to_plane1:
+      translation_m: [0.11414, 0.51115, 0.34236]
+      quaternion_xyzw: [-0.002161622519238495, 0.001296973511543097, -0.9150384441612799, 0.40335876208990307]
+      plane_z_axis_base_link: [0.005002226673894794, -0.0006297424813101807, 0.9999872904955894]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p10:
+    source_row: 10
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.07584, -0.38257, 0.28285, -0.00534, 0.00519, 0.82389]
+    derived_base_link_to_plane1:
+      translation_m: [0.07584, 0.38257, 0.28285]
+      quaternion_xyzw: [0.0025222196637810414, 0.002595116185855638, -0.9163370563495544, 0.40039143714692904]
+      plane_z_axis_base_link: [-0.002544282085916173, -0.0067757525652271475, 0.9999738075598993]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p11:
+    source_row: 11
+    raw_base_to_plane1_pose_xyz_rotvec: [0.03841, -0.49409, 0.43719, 0.00899, -0.00547, 0.82071]
+    derived_base_link_to_plane1:
+      translation_m: [-0.03841, 0.49409, 0.43719]
+      quaternion_xyzw: [-0.0026588729439698585, -0.004369884417968743, -0.9169658013626857, 0.39893301898455247]
+      plane_z_axis_base_link: [0.0013896087526301198, 0.010135493555638524, 0.9999476690096831]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p12:
+    source_row: 12
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.06635, -0.38358, 0.43729, -0.0045, 0.00384, 0.84776]
+    derived_base_link_to_plane1:
+      translation_m: [0.06635, 0.38358, 0.43729]
+      quaternion_xyzw: [0.0018630158101600523, 0.0021832216525313106, -0.9114957161069367, 0.41129955292220977]
+      plane_z_axis_base_link: [-0.0016003456807683314, -0.005512509506800069, 0.999983525430614]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p13:
+    source_row: 13
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.06309, -0.39567, 0.28901, -0.01561, -0.00214, 0.84671]
+    derived_base_link_to_plane1:
+      translation_m: [0.06309, 0.39567, 0.28901]
+      quaternion_xyzw: [-0.0010383117555003954, 0.007573853506243542, -0.911685655069854, 0.4108172647195047]
+      plane_z_axis_base_link: [0.00811616742760262, -0.01295683439984395, 0.9998831173035287]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p14:
+    source_row: 14
+    raw_base_to_plane1_pose_xyz_rotvec: [0.43942, -0.98923, 0.27947, -0.01233, -0.0007, 0.79383]
+    exact_duplicate_of: user_measured_candidate_p8
+    derived_base_link_to_plane1:
+      translation_m: [-0.43942, 0.98923, 0.27947]
+      quaternion_xyzw: [-0.00034088000754823266, 0.006004357847242448, -0.9222393965677353, 0.38657253770287686]
+      plane_z_axis_base_link: [0.005270985645495966, -0.010811361016495052, 0.9999276629753253]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p15:
+    source_row: 15
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.00327, -0.50126, 0.27942, -0.00576, -0.00076, 0.7778]
+    derived_base_link_to_plane1:
+      translation_m: [0.00327, 0.50126, 0.27942]
+      quaternion_xyzw: [-0.0003704929125963844, 0.00280794628494102, -0.925322593620459, 0.37917024660193144]
+      plane_z_axis_base_link: [0.0028150302962154966, -0.004915552500190236, 0.9999839563453252]
+    normal_direction: base_link_positive_z
+  user_measured_candidate_p16:
+    source_row: 16
+    raw_base_to_plane1_pose_xyz_rotvec: [-0.03413, -0.38168, 0.33594, -1.25152, 2.88032, -0.01303]
+    derived_base_link_to_plane1:
+      translation_m: [0.03413, 0.38168, 0.33594]
+      quaternion_xyzw: [-0.9171543373863561, -0.39851023369825994, 0.0005483054583687942, 0.004149025461109953]
+      plane_z_axis_base_link: [-0.004312619670965023, 0.007173582722461679, -0.999964969897695]
+    normal_direction: base_link_negative_z
